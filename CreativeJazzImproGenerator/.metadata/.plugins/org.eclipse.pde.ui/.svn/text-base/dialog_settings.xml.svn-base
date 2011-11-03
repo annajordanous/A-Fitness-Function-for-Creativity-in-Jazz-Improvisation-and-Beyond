@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="pde_compiler_errorwarnings_block">
+		<item key="2" value="true"/>
+		<item key="0" value="true"/>
+		<item key="1" value="true"/>
+	</section>
+</section>

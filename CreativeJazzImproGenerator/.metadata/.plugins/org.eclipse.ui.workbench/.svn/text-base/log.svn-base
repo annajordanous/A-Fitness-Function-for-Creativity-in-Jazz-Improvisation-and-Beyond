@@ -1,0 +1,966 @@
+!SESSION 2009-08-18 13:24:18.086 -----------------------------------------------
+eclipse.buildId=M20080911-1700
+java.version=1.5.0_19
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=ppc, WS=carbon, NL=en_US
+Framework arguments:  -keyring /home/akj20/MacHome/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch ppc -data /home/akj20/MacHome/Documents/Work/programming/java programming/RandomMusicGenerator -keyring /home/akj20/MacHome/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2009-08-18 13:24:31.741
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 4 0 2009-08-18 13:25:19.351
+!MESSAGE Unable to load repository: jar:file:/home/akj20/MacHome/Desktop/subclipse-source_1.4.2-1.zip!/
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: Error reading update site jar:file:/home/akj20/MacHome/Desktop/subclipse-source_1.4.2-1.zip!/.
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadSiteFile(UpdateSite.java:172)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:105)
+	at org.eclipse.equinox.internal.p2.updatesite.artifact.UpdateSiteArtifactRepository.<init>(UpdateSiteArtifactRepository.java:45)
+	at org.eclipse.equinox.internal.p2.updatesite.artifact.UpdateSiteArtifactRepositoryFactory.load(UpdateSiteArtifactRepositoryFactory.java:33)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:439)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:415)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:402)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.fetch(DownloadManager.java:103)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:93)
+	at org.eclipse.equinox.internal.provisional.p2.engine.phases.Collect.completeInstallableUnitPhase(Collect.java:56)
+	at org.eclipse.equinox.internal.provisional.p2.engine.InstallableUnitPhase.completePhase(InstallableUnitPhase.java:79)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.postPerform(Phase.java:143)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.perform(Phase.java:85)
+	at org.eclipse.equinox.internal.provisional.p2.engine.InstallableUnitPhase.perform(InstallableUnitPhase.java:53)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.perform(Phase.java:46)
+	at org.eclipse.equinox.internal.provisional.p2.engine.PhaseSet.perform(PhaseSet.java:38)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Engine.perform(Engine.java:53)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.performProvisioningPlan(ProvisioningUtil.java:265)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProfileModificationOperation.doExecute(ProfileModificationOperation.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningOperation.execute(ProvisioningOperation.java:40)
+	at org.eclipse.equinox.internal.provisional.p2.ui.ProvisioningOperationRunner$1.run(ProvisioningOperationRunner.java:94)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.util.zip.ZipException: error in opening zip file
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:203)
+	at java.util.jar.JarFile.<init>(JarFile.java:132)
+	at java.util.jar.JarFile.<init>(JarFile.java:70)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:56)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:41)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:53)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:102)
+	at sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:124)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:237)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:639)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:381)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:95)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.transfer(ECFTransport.java:284)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.performDownload(ECFTransport.java:193)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.download(ECFTransport.java:167)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadSiteFile(UpdateSite.java:156)
+	... 21 more
+!SUBENTRY 1 org.eclipse.equinox.p2.updatesite 4 1002 2009-08-18 13:25:19.353
+!MESSAGE Error reading update site jar:file:/home/akj20/MacHome/Desktop/subclipse-source_1.4.2-1.zip!/.
+!STACK 0
+java.util.zip.ZipException: error in opening zip file
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:203)
+	at java.util.jar.JarFile.<init>(JarFile.java:132)
+	at java.util.jar.JarFile.<init>(JarFile.java:70)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:56)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:41)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:53)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:102)
+	at sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:124)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:237)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:639)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:381)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:95)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.transfer(ECFTransport.java:284)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.performDownload(ECFTransport.java:193)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.download(ECFTransport.java:167)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadSiteFile(UpdateSite.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:105)
+	at org.eclipse.equinox.internal.p2.updatesite.artifact.UpdateSiteArtifactRepository.<init>(UpdateSiteArtifactRepository.java:45)
+	at org.eclipse.equinox.internal.p2.updatesite.artifact.UpdateSiteArtifactRepositoryFactory.load(UpdateSiteArtifactRepositoryFactory.java:33)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:439)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:415)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:402)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.fetch(DownloadManager.java:103)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:93)
+	at org.eclipse.equinox.internal.provisional.p2.engine.phases.Collect.completeInstallableUnitPhase(Collect.java:56)
+	at org.eclipse.equinox.internal.provisional.p2.engine.InstallableUnitPhase.completePhase(InstallableUnitPhase.java:79)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.postPerform(Phase.java:143)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.perform(Phase.java:85)
+	at org.eclipse.equinox.internal.provisional.p2.engine.InstallableUnitPhase.perform(InstallableUnitPhase.java:53)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.perform(Phase.java:46)
+	at org.eclipse.equinox.internal.provisional.p2.engine.PhaseSet.perform(PhaseSet.java:38)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Engine.perform(Engine.java:53)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.performProvisioningPlan(ProvisioningUtil.java:265)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProfileModificationOperation.doExecute(ProfileModificationOperation.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningOperation.execute(ProvisioningOperation.java:40)
+	at org.eclipse.equinox.internal.provisional.p2.ui.ProvisioningOperationRunner$1.run(ProvisioningOperationRunner.java:94)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2009-08-18 13:25:19.425
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.425
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins/com.sun.jna_3.0.9.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.426
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/com.sun.jna_3.0.9.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.427
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.428
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.tigris.subversion.clientadapter.feature_1.5.3.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.429
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.429
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.tigris.subversion.clientadapter.javahl.feature_1.5.7.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.430
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.430
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.tigris.subversion.clientadapter.svnkit.feature_1.5.6.1.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.431
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.432
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.433
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.tigris.subversion.subclipse_1.4.8.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.434
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.435
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.tigris.subversion.subclipse.graph.feature_1.0.7.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.435
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.436
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.tigris.subversion.subclipse.mylyn_3.0.0.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.438
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.439
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins/org.tmatesoft.svnkit_1.2.3.5521.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:25:19.440
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.tmatesoft.svnkit_1.2.3.5521.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:33:39.650
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:33:39.650
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:33:39.650
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:33:39.651
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:33:40.343
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:33:40.343
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:33:40.343
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:33:40.343
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:33:40.344
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding2176332962750939073.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:33:47.132
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:33:47.133
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:33:47.133
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:33:47.133
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:33:47.133
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:03.212
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:03.212
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:03.213
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:03.213
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:03.216
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:03.537
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:03.538
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:03.539
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:03.539
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:04.250
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:04.250
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:04.250
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:04.250
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:04.251
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding4955879169356404148.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:06.577
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:06.577
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:06.577
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:06.577
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:06.578
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:07.835
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:07.836
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:07.836
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:07.836
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:07.837
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:08.077
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:08.078
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:08.078
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:08.078
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:08.771
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:08.771
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:08.771
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:08.771
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:08.773
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding4116133114660995980.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:11.064
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:11.064
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:11.064
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:11.065
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:11.065
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:11.699
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:11.700
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:11.700
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:11.700
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:11.700
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:11.871
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:11.871
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:11.871
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:11.872
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:13.148
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:13.148
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:13.148
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:13.149
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:13.149
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding7013088992243742500.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:15.462
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:15.463
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:15.463
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:15.463
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:15.464
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:16.178
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:16.179
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:16.179
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:16.179
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:16.179
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:16.378
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:16.378
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:16.378
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:16.378
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:17.046
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:17.047
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:17.047
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:17.047
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:17.047
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding8906991245655823568.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:19.389
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:19.389
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:19.389
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:19.389
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:19.389
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:20.187
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:20.187
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:20.187
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:20.188
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:20.188
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:20.395
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:20.395
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:20.396
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:20.396
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:21.083
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:21.083
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:21.084
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:21.084
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:21.085
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding33345545226215982.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:23.404
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:23.405
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:23.405
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:23.405
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:23.405
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:23.882
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:23.883
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:23.883
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:23.884
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:23.884
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:24.052
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:24.053
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:24.053
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:24.053
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:25.295
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:25.295
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:25.295
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:25.295
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:25.295
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding3604659025205803475.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:27.510
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:27.510
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:27.510
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:27.510
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:27.511
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:27.770
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:27.770
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:27.771
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:27.771
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:27.772
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:27.951
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:27.952
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:27.952
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:27.952
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:28.637
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:28.637
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:28.637
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:28.639
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:28.639
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding7087595847786519404.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:30.887
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:30.887
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:30.887
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:30.888
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:30.888
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:37.115
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2009-08-18 13:34:37.115
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:37.115
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:37.116
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:37.116
+!MESSAGE Unsatisfied dependency: [org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500] requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500]
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:37.346
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:37.346
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:37.346
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:37.346
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:38.014
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:38.014
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:38.014
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl16.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl16.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2009-08-18 13:34:38.014
+!MESSAGE Unable to satisfy dependency from org.polarion.eclipse.team.svn.connector.javahl15.win32.feature.group 2.2.1.I20090708-1500 to requiredCapability: org.eclipse.equinox.p2.iu/org.polarion.eclipse.team.svn.connector.javahl15.win32/[2.2.1.I20090708-1500,2.2.1.I20090708-1500].
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2009-08-18 13:34:38.015
+!MESSAGE No solution found because the problem in /var/folders/zz/zzzivhrRnAmviuee+++9a+++0tU/-Tmp-/p2Encoding3822010287445636771.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2009-08-18 13:36:14.921
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.921
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.922
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.923
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.924
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.924
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.924
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.925
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.mylyn_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.926
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins/org.eclipse.team.svn.mylyn.source_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.927
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.mylyn.source_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.927
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.927
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.nl1_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.928
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins/org.eclipse.team.svn.nl1.sources_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.928
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.nl1.sources_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.929
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.929
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.resource.ignore.rules.jdt_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.930
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins/org.eclipse.team.svn.resource.ignore.rules.jdt.source_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.931
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.resource.ignore.rules.jdt.source_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.932
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.source_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.932
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins/org.eclipse.team.svn.sources_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.933
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.sources_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.933
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.934
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.939
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.eclipse.team.svn.ui.capabilities_0.7.8.I20090506-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.940
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.941
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:713)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.943
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.polarion.eclipse.team.svn.connector_2.2.1.I20090708-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.943
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/plugins/org.polarion.eclipse.team.svn.connector.sources_2.2.1.I20090708-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 1003 2009-08-18 13:36:14.943
+!MESSAGE Unable to write to repository: file:/home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619.
+!STACK 0
+java.io.IOException: Failed to create directory /home/a/ak/akj20/MacHome/.eclipse/org.eclipse.platform_3.4.0_1487476619/features/org.polarion.eclipse.team.svn.connector.sources_2.2.1.I20090708-1500.
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getOutputStream(SimpleArtifactRepository.java:706)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:154)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:146)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:94)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:504)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

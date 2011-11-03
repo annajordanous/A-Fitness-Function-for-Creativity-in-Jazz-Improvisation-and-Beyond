@@ -1,0 +1,94 @@
+10
+
+dir
+257
+https://svn.sussex.ac.uk/repos/akj20/CreativeJazzImproGenerator/.metadata/.plugins
+https://svn.sussex.ac.uk/repos/akj20
+
+
+
+2009-08-18T13:40:32.690925Z
+20
+akj20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f917816b-1394-4e41-b565-ac2c081a1be1
+
+org.eclipse.team.cvs.core
+dir
+
+org.eclipse.mylyn.bugzilla.core
+dir
+
+org.eclipse.datatools.connectivity
+dir
+
+org.eclipse.ui.intro
+dir
+
+org.eclipse.wst.jsdt.core
+dir
+
+org.eclipse.jdt.core
+dir
+
+org.eclipse.wst.server.core
+dir
+
+org.eclipse.core.runtime
+dir
+
+org.eclipse.debug.core
+dir
+
+org.eclipse.pde.api.tools
+dir
+
+org.eclipse.pde.ui
+dir
+
+org.eclipse.jdt.launching
+dir
+
+org.eclipse.pde.api.tools.ui
+dir
+
+org.eclipse.epp.usagedata.recording
+dir
+
+org.eclipse.wst.jsdt.ui
+dir
+
+org.eclipse.jdt.ui
+dir
+
+org.eclipse.ui.workbench
+dir
+
+org.eclipse.wst.server.ui
+dir
+
+org.eclipse.pde.core
+dir
+
+org.eclipse.core.resources
+dir
+
+org.eclipse.debug.ui
+dir
+
+org.eclipse.equinox.p2.ui.sdk
+dir
+

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.1.R34x_v20080818,org.eclipse.equinox.p2.ui.sdk.update,1250598319152
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250598319521
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250598348455
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250598369746
+started,bundle,org.eclipse.wst.common.frameworks.ui,1.1.200.v200805221400,org.eclipse.wst.common.frameworks.ui,1250598394909
+started,bundle,org.eclipse.wst.validation.ui,1.2.1.v200807292117,org.eclipse.wst.validation.ui,1250598394911
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250598407931
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250598416072
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.paste,1250598776314
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.paste,1250598806365
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250598936622
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.1.R34x_v20080818,org.eclipse.equinox.p2.ui.sdk.update,1250598936683
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250598937039
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.copy,1250599004353
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599006789
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599019163
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599021377
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599022394
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599050780
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599053828
+started,bundle,org.eclipse.equinox.security.ui,1.0.0.v20080603-1810,org.eclipse.equinox.security.ui,1250599061081
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599192638
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.help.aboutAction,1250599192758
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599194802
+started,bundle,org.eclipse.ui.views.log,1.0.0.v20080803-1700,org.eclipse.ui.views.log,1250599200721

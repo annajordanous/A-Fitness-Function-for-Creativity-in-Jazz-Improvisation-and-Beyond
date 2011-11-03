@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="ACE.jar"/>
+	<classpathentry kind="lib" path="jgap-examples.jar"/>
+	<classpathentry kind="lib" path="jgap-tests.jar"/>
+	<classpathentry kind="lib" path="jgap.jar" sourcepath="jgap.jar"/>
+	<classpathentry kind="lib" path="jMusic1.6.01.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

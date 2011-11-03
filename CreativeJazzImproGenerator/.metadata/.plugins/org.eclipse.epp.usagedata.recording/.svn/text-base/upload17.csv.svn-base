@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.wst.server.core,1.1.1.v20080730,org.eclipse.wst.server.core,1250599841510
+started,bundle,org.eclipse.wst.server.ui,1.1.2.v20080916,org.eclipse.wst.server.ui,1250599841535
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599843619
+started,bundle,org.eclipse.ecf.filetransfer,2.0.0.v20080611-1715,org.eclipse.ecf.filetransfer,1250599908794
+started,bundle,org.eclipse.ecf.provider.filetransfer,2.0.0.v20080611-1715,org.eclipse.ecf.provider.filetransfer,1250599908831
+started,bundle,org.eclipse.ecf.identity,2.0.0.v20080611-1715,org.eclipse.ecf.identity,1250599908846
+started,bundle,org.eclipse.ecf,2.0.0.v20080611-1715,org.eclipse.ecf,1250599908876
+started,bundle,org.eclipse.equinox.p2.extensionlocation,1.0.2.R34x_v20080825,org.eclipse.equinox.p2.extensionlocation,1250599954195
+started,bundle,org.eclipse.equinox.p2.updatesite,1.0.1.R34x_v20080808-1156,org.eclipse.equinox.p2.updatesite,1250599954206
+started,bundle,org.eclipse.equinox.p2.artifact.repository,1.0.2.R34x_v20080808-1156,org.eclipse.equinox.p2.artifact.repository,1250599954613
+started,bundle,org.eclipse.equinox.p2.metadata.generator,1.0.1.R34x_v20080819,org.eclipse.equinox.p2.metadata.generator,1250599954619
+started,bundle,org.eclipse.equinox.p2.touchpoint.eclipse,1.0.2.R34x_v20080910,org.eclipse.equinox.p2.touchpoint.eclipse,1250599956802
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599965833
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.1.R34x_v20080818,org.eclipse.equinox.p2.ui.sdk.update,1250599965888
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250599966288
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.copy,1250599975116
+activated,view,org.eclipse.ui.navigator.resources,3.3.101.M20080910-0800,org.eclipse.ui.navigator.ProjectExplorer,1250600012755
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250600012878
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250600013864
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250600115690
+closed,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1250600116959
+stopped,bundle,org.eclipse.jst.j2ee.xdoclet.runtime,1.1.102.v200805140135,org.eclipse.jst.j2ee.xdoclet.runtime,1250600117596
+stopped,bundle,org.eclipse.jst.j2ee.ejb.annotations.xdoclet,1.2.0.v200805140020,org.eclipse.jst.j2ee.ejb.annotations.xdoclet,1250600117596
+stopped,bundle,org.eclipse.jst.server.generic.jboss,1.5.205.v200805140145,org.eclipse.jst.server.generic.jboss,1250600117596
+stopped,bundle,org.eclipse.jst.server.generic.jonas,1.5.205.v200805140145,org.eclipse.jst.server.generic.jonas,1250600117597
