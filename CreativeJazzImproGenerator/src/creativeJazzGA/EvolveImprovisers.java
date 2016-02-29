@@ -97,7 +97,7 @@ public class EvolveImprovisers extends Thread {
 	}
 
 	/**
-	 * @return
+	 * @return true if the user wants the evolution process to repeat for another generation, false otherwise
 	 */
 	private static boolean evolveNextGeneration() {
 		boolean keepEvolving;
@@ -252,7 +252,7 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return polyphony (number of parts) for that Improvisor chromosome 
 	 */
 	static Integer getPolyphonyOf(IChromosome chromosome) {
 		Integer polyphony = (Integer) chromosome.getGene(0).getAllele();
@@ -261,7 +261,8 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return maxNotesToGenerate number of notes this Improvisor chromosome will generate
+
 	 */
 	static Integer getMaxNotesOf(IChromosome chromosome) {
 		Integer maxNotesToGenerate = (Integer) chromosome.getGene(1)
@@ -271,7 +272,7 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return key an integer indicating the key (pitch class) this Improvisor will work in: 0=C, 1=C#, up to 11=B 
 	 */
 	static Integer getKeyOf(IChromosome chromosome) {
 		Integer key = (Integer) chromosome.getGene(2).getAllele();
@@ -280,7 +281,7 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return noteRange The note range (in MIDI, 0-127) that the Improvisor will be restricted to
 	 */
 	static Integer getNoteRangeOf(IChromosome chromosome) {
 		Integer noteRange = (Integer) chromosome.getGene(3).getAllele();
@@ -289,7 +290,7 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return lowestNote The lowest note in MIDI (0-127) this Improvisor chromosome can use
 	 */
 	static Integer getLowestNoteOf(IChromosome chromosome) {
 		Integer lowestNote = (Integer) chromosome.getGene(4).getAllele();
@@ -298,7 +299,7 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return rhythmMult A representation of the longest note lengths an Improvisor chromosome can use
 	 */
 	static Integer getRhythmMultiplierOf(IChromosome chromosome) {
 		Integer key = (Integer) chromosome.getGene(5).getAllele();
@@ -307,16 +308,16 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return noteRatio A determiner of what the proportion of notes to rests is (min 0% max 100% notes)
 	 */
 	static Integer getNoteRestRatioOf(IChromosome chromosome) {
-		Integer key = (Integer) chromosome.getGene(6).getAllele();
-		return key;
+		Integer noteRatio = (Integer) chromosome.getGene(6).getAllele();
+		return noteRatio;
 	}
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return noOfImprovisations the number of Improvisations this improviser will do
 	 */
 	static Integer getNumImprovisationsOf(IChromosome chromosome) {
 		Integer noOfImprovisations = (Integer) chromosome.getGene(7)
@@ -326,7 +327,7 @@ public class EvolveImprovisers extends Thread {
 
 	/**
 	 * @param chromosome The IChromosome being queried for details
-	 * @return
+	 * @return medianTempo The average (median) tempo the Improvisor will generate improvisations with (1-240)
 	 */
 	static Integer getMedianTempoOf(IChromosome chromosome) {
 		Integer medianTempo = (Integer) chromosome.getGene(8).getAllele();
@@ -426,10 +427,12 @@ public class EvolveImprovisers extends Thread {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		// Divert standard error to log file, for saving results of program
-		// runtime
+		// Before we start:
+		// Divert standard error to log file, for saving results of program runtime
 		PrintStream originalStandardError = ImproviserCreativityFitnessFunction.divertStandardError();
 
+		
+		
 		int noOfImprovisers = Integer.valueOf(args[0]);
 		
 		// Set up GA parameters - structure and permissable ranges of
@@ -447,6 +450,9 @@ public class EvolveImprovisers extends Thread {
 		// display the parameters of the fittest population member in the most recent generation
 		generateFinalResults();
 
+		
+		
+		// Now program has finished running:
 		// Restore standard error display settings
 		System.setErr(originalStandardError);
 	}
