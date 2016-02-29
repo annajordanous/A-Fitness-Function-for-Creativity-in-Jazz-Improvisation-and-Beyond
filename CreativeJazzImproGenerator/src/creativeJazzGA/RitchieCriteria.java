@@ -7,7 +7,7 @@ package creativeJazzGA;
  * 
  * See:
  * 
- * 	G. Ritchie. Some empirical criteria for attributing creativity to a computer program. Minds and Machines, 17:67Ð99, 2007.
+ * 	G. Ritchie. Some empirical criteria for attributing creativity to a computer program. Minds and Machines, 17:67ï¿½99, 2007.
  * 
  *  G. Ritchie. Assessing creativity. In Proceedings of the AISB Symposium on AI and Creativity in Arts and Science, York, UK, 2001.
  *
@@ -82,8 +82,8 @@ public class RitchieCriteria   {
 			criteria[17] = calcCriteria18(popMinusI);
 			
 			String output = display();
-// TODO zzz System.out.println for debugging
-System.err.println(output);
+// TODO zzz System.out.println for debugging, System.err.println for normal running
+System.out.println(output);
 			double fitness = calculateFitnessFromCriteria();
 			return fitness;
 	}
@@ -122,14 +122,14 @@ System.err.println("Criteria Fitness = "+criteriaFitness);
 		int summary = 0;
 		for (int i=0; i<18; i++)  {
 			criteriaMeaning = getCriteriaMeaning(i);
-			//displayOutput = displayOutput+"Criteria "+(i+1)+" [ "+criteriaMeaning+" ]: "+criteria[i]+"\n";
+			displayOutput = displayOutput+"Criteria "+(i+1)+" [ "+criteriaMeaning+" ]: "+criteria[i]+"\n";
 			if (criteria[i]) {
 				summary++;
-				displayOutput = displayOutput+"T";
+				//displayOutput = displayOutput+"T";
 			}
-			else displayOutput = displayOutput+"F";
+			//else displayOutput = displayOutput+"F";
 		}
-		displayOutput = displayOutput+" - Total: "+summary+"/18";
+		displayOutput = displayOutput+" - Total: "+summary+"/18 criteria satisfied";
 		return displayOutput;
 	}
 

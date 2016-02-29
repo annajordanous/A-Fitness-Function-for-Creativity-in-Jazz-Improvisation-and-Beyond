@@ -24,7 +24,7 @@ public class Improvisations extends Thread implements JMC {
 	static Sequencer sequencer;
 	
 	private Random random = new Random();
-	private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 	public Object clone()  throws CloneNotSupportedException {
 		return super.clone();
@@ -55,7 +55,9 @@ public class Improvisations extends Thread implements JMC {
 		
 	}
 	
-	
+	public static BufferedReader getBufferedReaderIn()   {
+		return in;
+	}
 	/**
 	 * 
 	 */
@@ -341,7 +343,7 @@ public class Improvisations extends Thread implements JMC {
 	private void ratePopulationMember(int index) {
 		// rate out of 10 (0 to 10, where 0 is worst, and 10 is best) 
 		long pieceDuration = Math.round(population[index].getEndTime());
-		System.out.println("This piece is "+pieceDuration+" seconds long");
+		System.out.println("This piece is a maximum of "+pieceDuration+" seconds long");
 
 // TODO zz PUT THIS LINE BACK IN AFTER DEBUGGING - TO MAKE THE RATING FUNCTION WAIT FOR THE PIECE TO FINISH BEFORE ASKING FOR A RATING
 /*		try  {	sleep(pieceDuration *1000); 	} catch (Exception e)  {}

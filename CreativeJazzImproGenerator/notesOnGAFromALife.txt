@@ -1,3 +1,0 @@
-
-from Inman: For Design Problems, encoding discrete symbols eg binary, rather than reals, my own initial heuristic is: GA (usually steady state rather than generational), selection: linear rank based, slope 2.0 to 0.0 sexual, uniform recombination, mutation rate very approx 1 mutation per (non-junk part of) genotype, Elitism not necessary, population size 30 - 100
-In fact I always use ... Microbial one-liner GA (Lec 3)   

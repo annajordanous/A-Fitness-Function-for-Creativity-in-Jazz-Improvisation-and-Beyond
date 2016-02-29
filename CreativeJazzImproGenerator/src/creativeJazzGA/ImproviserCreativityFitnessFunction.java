@@ -9,6 +9,8 @@ import javax.sound.midi.Sequencer;
 /* import jm.music.data.Score;
 import jm.util.Write;*/
 
+
+
 import org.jgap.*;
 
 /**
@@ -107,8 +109,17 @@ public class ImproviserCreativityFitnessFunction extends FitnessFunction {
 		improviserOutput.ratePopulation(); 
 		// 3. use fitness ratings to calculate Ritchie's criteria on that improviser/composer's output
 		double criteriaFitness = RitchieCriteria.calculateRitchieCriteria(improviserOutput);
+		presentCriteriaAndWaitTillUserReady();
 		// 4. return some weighted sum of the criteria as the fitness function score for that improviser/composer
 		return criteriaFitness;
+	}
+
+	private void presentCriteriaAndWaitTillUserReady() {
+		System.out.print("Press ENTER to continue when you have finished looking at the output of Ritchie's criteria for this Improviser");
+		BufferedReader in = Improvisations.getBufferedReaderIn();
+		try			{
+			in.readLine();   // dont worry about doing anything with this, just pause till some input received to continue 
+		} catch(Exception e) { }
 	}
 
 	/**

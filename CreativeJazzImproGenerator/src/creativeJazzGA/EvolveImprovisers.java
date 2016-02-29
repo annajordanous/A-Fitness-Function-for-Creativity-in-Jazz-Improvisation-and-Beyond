@@ -431,8 +431,6 @@ public class EvolveImprovisers extends Thread {
 		// Divert standard error to log file, for saving results of program runtime
 		PrintStream originalStandardError = ImproviserCreativityFitnessFunction.divertStandardError();
 
-		
-		
 		int noOfImprovisers = Integer.valueOf(args[0]);
 		
 		// Set up GA parameters - structure and permissable ranges of
