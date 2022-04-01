@@ -1,3 +1,5 @@
+@version 2.0 autoGAmp
+
 Java package, associated files and some sample output.
 
 Code contained in src/creativeJazzGA. 
