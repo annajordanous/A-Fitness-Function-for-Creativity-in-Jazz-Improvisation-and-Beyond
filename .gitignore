@@ -2,3 +2,4 @@
 *.class
 *.log
 temp_output.txt
+.vscode
