@@ -1,2 +1,4 @@
 *.mid
 *.class
+*.log
+temp_output.txt
