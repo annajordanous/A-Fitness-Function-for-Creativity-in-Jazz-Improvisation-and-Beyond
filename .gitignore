@@ -3,3 +3,4 @@
 *.log
 temp_output.txt
 .vscode
+Gen10/*
