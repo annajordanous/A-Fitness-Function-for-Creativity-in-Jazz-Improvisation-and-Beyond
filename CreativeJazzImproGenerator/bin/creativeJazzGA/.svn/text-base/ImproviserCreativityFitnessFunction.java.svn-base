@@ -9,8 +9,6 @@ import javax.sound.midi.Sequencer;
 /* import jm.music.data.Score;
 import jm.util.Write;*/
 
-
-
 import org.jgap.*;
 
 /**
@@ -100,39 +98,17 @@ public class ImproviserCreativityFitnessFunction extends FitnessFunction {
 		Integer noOfImprovisations   = EvolveImprovisers.getNumImprovisationsOf(chromosome);
 		Improvisations improviserOutput = new Improvisations(noOfImprovisations, improParameters, true);
 		String filename = EvolveImprovisers.toString(chromosome);
-
+		
 		System.err.println("Evaluating "+filename);
-		// old from 2010 code
-		// double fitness = evaluateWithRitchieCriteria(improviserOutput);
-		// new fitness function
-		double fitness = evaluateWithMultiObjectives(improviserOutput);
-		return fitness;
-	}
-
-	private double evaluateWithMultiObjectives(Improvisations improviserOutput)  {
-		improviserOutput.ratePopulationSocialCommunicationAndInteraction();
-		improviserOutput.ratePopulationDomainCompetence();
-		improviserOutput.ratePopulationIntentionAndEmotionalInvolvement();
-		double fitness = ComponentObjectives.calculateWeightedSum(improviserOutput);
-		return fitness;
-	}
-
-	private double evaluateWithRitchieCriteria(Improvisations improviserOutput) {
-		// rate all and evolve population accordingly (on the assumption it gets picked later)
-		improviserOutput.ratePopulationWithRitchie(); 
-		// use fitness ratings to calculate Ritchie's criteria on that improviser/composer's output
-		double fitness = RitchieCriteria.calculateRitchieCriteria(improviserOutput);
-		presentCriteriaAndWaitTillUserReady();
-		// return some weighted sum of the criteria as the fitness function score for that improviser/composer
-		return fitness;
-	}
-
-	private void presentCriteriaAndWaitTillUserReady() {
-		System.out.print("Press ENTER to continue when you have finished looking at the output of Ritchie's criteria for this Improviser");
-		BufferedReader in = Improvisations.getBufferedReaderIn();
-		try			{
-			in.readLine();   // dont worry about doing anything with this, just pause till some input received to continue 
-		} catch(Exception e) { }
+		// TODO What I want to do next here:
+		// 1. Access a permanent but evolving population of compositions from the composer (i.e. Composer not Improviser)
+//		Improvisations improviserOutput = chromosome.getApplicationData();
+		// 2. rate all and evolve population accordingly (on the assumption it gets picked later)
+		improviserOutput.ratePopulation(); 
+		// 3. use fitness ratings to calculate Ritchie's criteria on that improviser/composer's output
+		double criteriaFitness = RitchieCriteria.calculateRitchieCriteria(improviserOutput);
+		// 4. return some weighted sum of the criteria as the fitness function score for that improviser/composer
+		return criteriaFitness;
 	}
 
 	/**

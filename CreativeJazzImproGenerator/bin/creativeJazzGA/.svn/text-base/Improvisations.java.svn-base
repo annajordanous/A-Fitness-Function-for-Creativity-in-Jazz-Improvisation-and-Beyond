@@ -14,8 +14,7 @@ import jm.util.*;
 public class Improvisations extends Thread implements JMC {
 
 	private Score[] population, inspiringSet;
-	private double[] ratings, value, typicality; // for Ritchie Criteria
-	private double socialComm, domComp, intentEmo = 0.0;
+	private double[] ratings, value, typicality;
 	private int populationCapacity, currentPopulationSize, inspiringSetCapacity;
 	
 	private int polyphony, maxNotes, key, noteRange, lowestNote, rhythm, restRatio, medianTempo, tempoVariance;
@@ -25,7 +24,7 @@ public class Improvisations extends Thread implements JMC {
 	static Sequencer sequencer;
 	
 	private Random random = new Random();
-	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 	public Object clone()  throws CloneNotSupportedException {
 		return super.clone();
@@ -56,9 +55,7 @@ public class Improvisations extends Thread implements JMC {
 		
 	}
 	
-	public static BufferedReader getBufferedReaderIn()   {
-		return in;
-	}
+	
 	/**
 	 * 
 	 */
@@ -228,11 +225,11 @@ public class Improvisations extends Thread implements JMC {
 	 *  It leaves the Population array full of only the fittest members.
 	 *  The rest of the Population array is null.
 	 */
-/*	void selection()  {   // TODO Lots of old GA methods to remove here
+	void selection()  {   // TODO Lots of old GA methods to remove here
 		
 		ratePopulation();
 		
-	} */
+	}
 	
 /*	*//**
 	 * Performs 'house-keeping work' to make sure the Population array is in a suitable state for reuse
@@ -291,30 +288,30 @@ public class Improvisations extends Thread implements JMC {
 		sequencer.close();
 	}
 
-	void ratePopulationWithRitchie()  {
+	void ratePopulation()  {
 		int index1 = choosePopulationMemberAtRandom();	
 		System.err.print("Rating example 1: ");
-		rateChosenSampleWithRitchie(index1);
+		rateChosenSample(index1);
 		int index2 = index1;
 		if (populationCapacity >= 2)  {   // if only one impro, can only rate one - otherwise rate two impros
 			while (index2==index1)  {  // so it can only escape the while loop when it has chosen a different member of the population to index1
 				index2 = choosePopulationMemberAtRandom();
 			}
 			System.err.print("Rating example 2: ");
-			rateChosenSampleWithRitchie(index2);
+			rateChosenSample(index2);
 		}
-		propogateRatingsWithRitchie(index1, index2);
+		propogateRatings(index1, index2);
 	}
 
 	/**
 	 * @param index
 	 */
-	private void rateChosenSampleWithRitchie(int index) {
+	private void rateChosenSample(int index) {
 		String filename;
 		filename = makeFilename(index);
 		// View.notate(population[i]);
 		playMidiFile(filename, population[index]);	
-		ratePopulationMemberWithRitchie(index); 
+		ratePopulationMember(index); 
 		stopPlayback();
 	}
 
@@ -327,7 +324,7 @@ public class Improvisations extends Thread implements JMC {
 	 * @param index1 Index position of the first Improvisation example to have been rated in ratePopulationMember()
 	 * @param index2 Index position of the second Improvisation example to have been rated in ratePopulationMember()
 	 */
-	private void propogateRatingsWithRitchie(int index1, int index2) {
+	private void propogateRatings(int index1, int index2) {
 		double aveValueRating = (double) (getValueRatingOfMemberAt(index1)+getValueRatingOfMemberAt(index2))/2.0;
 		double aveTypicalityRating = (double) (getTypicalityRatingOfMemberAt(index1)+getTypicalityRatingOfMemberAt(index2))/2.0;
 		for (int i=0; i<populationCapacity; i++)  {
@@ -341,11 +338,14 @@ public class Improvisations extends Thread implements JMC {
 	/**
 	 * @param index the Index number of the population member being rated
 	 */
-	private void ratePopulationMemberWithRitchie(int index) {
+	private void ratePopulationMember(int index) {
 		// rate out of 10 (0 to 10, where 0 is worst, and 10 is best) 
 		long pieceDuration = Math.round(population[index].getEndTime());
-		System.out.println("This piece is a maximum of "+pieceDuration+" seconds long");
+		System.out.println("This piece is "+pieceDuration+" seconds long");
 
+// TODO zz PUT THIS LINE BACK IN AFTER DEBUGGING - TO MAKE THE RATING FUNCTION WAIT FOR THE PIECE TO FINISH BEFORE ASKING FOR A RATING
+/*		try  {	sleep(pieceDuration *1000); 	} catch (Exception e)  {}
+*/
 		// ask what value the piece has
 		rateForValue(index); 
 		
@@ -993,41 +993,6 @@ System.out.println("EndTime of music after adding part  = "+population[index].ge
 		// TODO Auto-generated method stub
 		return null;
 	}
-    public double getSocialCommunicationAndInteractionRating() {
-        return socialComm;
-    }
-    public double getDomainCompetenceRating() {
-        return domComp;
-    }
-    public double getIntentionAndEmotionalInvolvementRating() {
-        return intentEmo;
-    }
-    public void ratePopulationSocialCommunicationAndInteraction() {
-		// calculate rating of all population members and average over all population
-		double ratingSCI = 0.0;
-		for (Score popMember : population) {
-			ratingSCI += ComponentObjectives.ratePopulationMemberForSCI(popMember);
-		}
-		socialComm = ratingSCI / getCurrentPopulationSize();
-    }
-
-    public void ratePopulationDomainCompetence() {
-		// calculate rating of all population members and average over all population
-		double ratingDC = 0.0;
-		for (Score popMember : population) {
-			ratingDC +=  ComponentObjectives.ratePopulationMemberForDC(popMember);
-		}
-		domComp = ratingDC / getCurrentPopulationSize();
-    }
-    
-	public void ratePopulationIntentionAndEmotionalInvolvement() {
-		// calculate rating of all population members and average over all population
-		double ratingIEI = 0.0;
-		for (Score popMember : population) {
-			ratingIEI +=  ComponentObjectives.ratePopulationMemberForIEI(popMember);
-		}
-		intentEmo = ratingIEI / getCurrentPopulationSize();
-    }
 	
 	
 }
