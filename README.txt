@@ -1,4 +1,4 @@
-@version 2.0 autoGAmp
+@version 2.0 (was autoGAmp branch)
 
 Java package, associated files and some sample output.
 
