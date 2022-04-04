@@ -22,26 +22,26 @@ public class EvolveImprovisers extends Thread {
 	static Configuration conf;
 	static Genotype population;
 
-	private static int maxPolyphony = 20; // 20 arbitrarily chosen. polyphony -
+	private static final int MAX_POLYPHONY = 20; // 20 arbitrarily chosen. polyphony -
 											// no. of parts
-	private static int maxNumNotes = 200; // 200 arbitrarily chosen num notes to
+	private static final int MAX_NUM_NOTES = 200; // 200 arbitrarily chosen num notes to
 											// generate
-	private static int maxKey = 11; // key - pitch class // 0 = C, 1 = C#, up to
+	private static final int MAX_KEY = 11; // key - pitch class // 0 = C, 1 = C#, up to
 									// 11 = B
-	private static int maxNoteRange = 128; // note range in MIDI // max possible
+	private static final int MAX_NOTE_RANGE = 128; // note range in MIDI // max possible
 											// is 128 i.e. 0-127
-	private static int maxLowestNote = 127; // bottom note in MIDI nos // max
+	private static final int MAX_LOWEST_NOTE = 127; // bottom note in MIDI nos // max
 											// possible is 127 (highest MIDI
 											// note)
-	private static int maxRhythmMult = 10; // affects the longest note lengths
-	private static int maxNoteRatio = 100; // determines what the proportion of
+	private static final int MAX_RHYTHM_MULT = 10; // affects the longest note lengths
+	private static final int MAX_NOTE_RATIO = 100; // determines what the proportion of
 											// notes to rests is (max 100%
 											// notes)
-	private static int maxNumImpros = 10; // no of Improvisations this
+	private static final int MAX_NUM_IMPROS = 10; // no of Improvisations this
 											// improviser will do
-	private static int maxMedianTempo = 240; // 1 - 60 - 90 - 120 - 150 - 180 -
+	private static final int MAX_MEDIAN_TEMPO = 240; // 1 - 60 - 90 - 120 - 150 - 180 -
 												// 240 chosen for musicality
-	private static int maxTempoVar = maxMedianTempo; // amount tempo can vary up
+	private static final int MAX_TEMPO_VAR = MAX_MEDIAN_TEMPO; // amount tempo can vary up
 														// or down - chosen to
 														// be as unrestrictive
 														// as poss
@@ -74,16 +74,16 @@ public class EvolveImprovisers extends Thread {
 		conf.setPopulationSize(populationSize);
 
 		Gene[] sampleGenes = new Gene[10];
-		sampleGenes[0] = new PolyphonyGene(conf, 1, maxPolyphony);
-		sampleGenes[1] = new MaxNumNotesGene(conf, 1, maxNumNotes);
-		sampleGenes[2] = new KeyGene(conf, 0, maxKey);
-		sampleGenes[3] = new NoteRangeGene(conf, 1, maxNoteRange);
-		sampleGenes[4] = new LowestNoteGene(conf, 0, maxLowestNote);
-		sampleGenes[5] = new RhythmMultiplierGene(conf, 1, maxRhythmMult);
-		sampleGenes[6] = new NoteRestRatioGene(conf, 0, maxNoteRatio);
-		sampleGenes[7] = new NumImprovisationsGene(conf, 1, maxNumImpros);
-		sampleGenes[8] = new medianTempoGene(conf, 1, maxMedianTempo);
-		sampleGenes[9] = new tempoVarianceGene(conf, 0, maxTempoVar);
+		sampleGenes[0] = new PolyphonyGene(conf, 1, MAX_POLYPHONY);
+		sampleGenes[1] = new MaxNumNotesGene(conf, 1, MAX_NUM_NOTES);
+		sampleGenes[2] = new KeyGene(conf, 0, MAX_KEY);
+		sampleGenes[3] = new NoteRangeGene(conf, 1, MAX_NOTE_RANGE);
+		sampleGenes[4] = new LowestNoteGene(conf, 0, MAX_LOWEST_NOTE);
+		sampleGenes[5] = new RhythmMultiplierGene(conf, 1, MAX_RHYTHM_MULT);
+		sampleGenes[6] = new NoteRestRatioGene(conf, 0, MAX_NOTE_RATIO);
+		sampleGenes[7] = new NumImprovisationsGene(conf, 1, MAX_NUM_IMPROS);
+		sampleGenes[8] = new medianTempoGene(conf, 1, MAX_MEDIAN_TEMPO);
+		sampleGenes[9] = new tempoVarianceGene(conf, 0, MAX_TEMPO_VAR);
 		IChromosome sampleChromosome = new Chromosome(conf, sampleGenes); // not
 																			// sure
 																			// why
@@ -347,70 +347,70 @@ public class EvolveImprovisers extends Thread {
 	 * @return
 	 */
 	static int getMaxPolyphony() {
-		return maxPolyphony;
+		return MAX_POLYPHONY;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxNumNotes() {
-		return maxNumNotes;
+		return MAX_NUM_NOTES;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxKey() {
-		return maxKey;
+		return MAX_KEY;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxNoteRange() {
-		return maxNoteRange;
+		return MAX_NOTE_RANGE;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxLowestNote() {
-		return maxLowestNote;
+		return MAX_LOWEST_NOTE;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxRhythmMult() {
-		return maxRhythmMult;
+		return MAX_RHYTHM_MULT;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxNoteRatio() {
-		return maxNoteRatio;
+		return MAX_NOTE_RATIO;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxNumImpros() {
-		return maxNumImpros;
+		return MAX_NUM_IMPROS;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxMedianTempo() {
-		return maxMedianTempo;
+		return MAX_MEDIAN_TEMPO;
 	}
 
 	/**
 	 * @return
 	 */
 	static int getMaxTempoVar() {
-		return maxTempoVar;
+		return MAX_TEMPO_VAR;
 	}
 
 	/**
