@@ -1,4 +1,4 @@
-package creativeJazzGA;
+package creativeJazzGA.genes;
 
 import org.jgap.*;
 import org.jgap.impl.*;

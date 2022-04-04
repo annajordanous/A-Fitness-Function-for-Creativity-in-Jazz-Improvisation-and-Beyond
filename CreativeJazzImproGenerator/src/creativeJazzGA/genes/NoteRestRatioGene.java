@@ -1,9 +1,9 @@
-package creativeJazzGA;
+package creativeJazzGA.genes;
 
 import org.jgap.*;
 import org.jgap.impl.*;
 
-public class RhythmMultiplierGene extends IntegerGene  implements Gene, java.io.Serializable {
+public class NoteRestRatioGene extends IntegerGene  implements Gene, java.io.Serializable {
 	/**
 	 * 
 	 */
@@ -13,7 +13,7 @@ public class RhythmMultiplierGene extends IntegerGene  implements Gene, java.io.
 	Configuration conf;
 	
 	
-	public RhythmMultiplierGene(Configuration aConfiguration, int lowerBound, int upperBound)
+	public NoteRestRatioGene(Configuration aConfiguration, int lowerBound, int upperBound)
 			throws InvalidConfigurationException {
 		super(aConfiguration, lowerBound, upperBound);
 		m_lowerBounds = lowerBound;
@@ -24,7 +24,7 @@ public class RhythmMultiplierGene extends IntegerGene  implements Gene, java.io.
 	public Gene newGene()  {
 		Gene newGene = null;
 		try {
-			newGene = new RhythmMultiplierGene(conf, m_lowerBounds, m_upperBounds);
+			newGene = new NoteRestRatioGene(conf, m_lowerBounds, m_upperBounds);
 		} catch (InvalidConfigurationException e) { }
 		return newGene;
 	}
@@ -35,7 +35,7 @@ public class RhythmMultiplierGene extends IntegerGene  implements Gene, java.io.
 	   *
 	   */
 	  public String toString() {
-	    String s = "RhythmMultiplierGene(" + m_lowerBounds + "," + m_upperBounds + ")"
+	    String s = "NoteRestRatioGene(" + m_lowerBounds + "," + m_upperBounds + ")"
 	        + "=";
 	    if (getInternalValue() == null) {
 	      s += "null";
@@ -45,6 +45,5 @@ public class RhythmMultiplierGene extends IntegerGene  implements Gene, java.io.
 	    }
 	    return s;
 	  }
-
 
 }

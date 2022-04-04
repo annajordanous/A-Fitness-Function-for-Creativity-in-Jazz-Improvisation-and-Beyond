@@ -1,19 +1,19 @@
-package creativeJazzGA;
+package creativeJazzGA.genes;
 
 import org.jgap.*;
 import org.jgap.impl.*;
 
-public class LowestNoteGene extends IntegerGene  implements Gene, java.io.Serializable {
+public class NumImprovisationsGene extends IntegerGene  implements Gene, java.io.Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 6312685327284729028L;
 
 	private int m_lowerBounds, m_upperBounds;
-	Configuration conf;
+	Configuration conf;	
 	
 	
-	public LowestNoteGene(Configuration aConfiguration, int lowerBound, int upperBound)
+	public NumImprovisationsGene(Configuration aConfiguration, int lowerBound, int upperBound)
 			throws InvalidConfigurationException {
 		super(aConfiguration, lowerBound, upperBound);
 		m_lowerBounds = lowerBound;
@@ -24,7 +24,7 @@ public class LowestNoteGene extends IntegerGene  implements Gene, java.io.Serial
 	public Gene newGene()  {
 		Gene newGene = null;
 		try {
-			newGene = new LowestNoteGene(conf, m_lowerBounds, m_upperBounds);
+			newGene = new NumImprovisationsGene(conf, m_lowerBounds, m_upperBounds);
 		} catch (InvalidConfigurationException e) { }
 		return newGene;
 	}
@@ -35,7 +35,7 @@ public class LowestNoteGene extends IntegerGene  implements Gene, java.io.Serial
 	   *
 	   */
 	  public String toString() {
-	    String s = "LowestNoteGene(" + m_lowerBounds + "," + m_upperBounds + ")"
+	    String s = "NumImprovisationsGene(" + m_lowerBounds + "," + m_upperBounds + ")"
 	        + "=";
 	    if (getInternalValue() == null) {
 	      s += "null";
@@ -44,6 +44,6 @@ public class LowestNoteGene extends IntegerGene  implements Gene, java.io.Serial
 	      s += getInternalValue().toString();
 	    }
 	    return s;
-	  }
+	  }	
 
 }

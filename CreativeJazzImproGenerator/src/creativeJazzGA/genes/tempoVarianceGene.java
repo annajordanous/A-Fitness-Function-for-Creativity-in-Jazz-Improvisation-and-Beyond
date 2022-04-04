@@ -1,9 +1,9 @@
-package creativeJazzGA;
+package creativeJazzGA.genes;
 
 import org.jgap.*;
 import org.jgap.impl.*;
 
-public class NumImprovisationsGene extends IntegerGene  implements Gene, java.io.Serializable {
+public class tempoVarianceGene extends IntegerGene  implements Gene, java.io.Serializable {
 	/**
 	 * 
 	 */
@@ -13,7 +13,7 @@ public class NumImprovisationsGene extends IntegerGene  implements Gene, java.io
 	Configuration conf;	
 	
 	
-	public NumImprovisationsGene(Configuration aConfiguration, int lowerBound, int upperBound)
+	public tempoVarianceGene(Configuration aConfiguration, int lowerBound, int upperBound)
 			throws InvalidConfigurationException {
 		super(aConfiguration, lowerBound, upperBound);
 		m_lowerBounds = lowerBound;
@@ -24,7 +24,7 @@ public class NumImprovisationsGene extends IntegerGene  implements Gene, java.io
 	public Gene newGene()  {
 		Gene newGene = null;
 		try {
-			newGene = new NumImprovisationsGene(conf, m_lowerBounds, m_upperBounds);
+			newGene = new tempoVarianceGene(conf, m_lowerBounds, m_upperBounds);
 		} catch (InvalidConfigurationException e) { }
 		return newGene;
 	}
@@ -35,7 +35,7 @@ public class NumImprovisationsGene extends IntegerGene  implements Gene, java.io
 	   *
 	   */
 	  public String toString() {
-	    String s = "NumImprovisationsGene(" + m_lowerBounds + "," + m_upperBounds + ")"
+	    String s = "tempoVarianceGene(" + m_lowerBounds + "," + m_upperBounds + ")"
 	        + "=";
 	    if (getInternalValue() == null) {
 	      s += "null";

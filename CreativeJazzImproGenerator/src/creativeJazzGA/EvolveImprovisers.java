@@ -10,6 +10,17 @@ import jm.music.data.Score;
 import org.jgap.*;
 import org.jgap.impl.*;
 
+import creativeJazzGA.genes.KeyGene;
+import creativeJazzGA.genes.LowestNoteGene;
+import creativeJazzGA.genes.MaxNumNotesGene;
+import creativeJazzGA.genes.NoteRangeGene;
+import creativeJazzGA.genes.NoteRestRatioGene;
+import creativeJazzGA.genes.NumImprovisationsGene;
+import creativeJazzGA.genes.PolyphonyGene;
+import creativeJazzGA.genes.RhythmMultiplierGene;
+import creativeJazzGA.genes.medianTempoGene;
+import creativeJazzGA.genes.tempoVarianceGene;
+
 /**
  * @author Anna Jordanous
  * @version Summer 2010

@@ -1,9 +1,9 @@
-package creativeJazzGA;
+package creativeJazzGA.genes;
 
 import org.jgap.*;
 import org.jgap.impl.*;
 
-public class NoteRangeGene extends IntegerGene  implements Gene, java.io.Serializable {
+public class PolyphonyGene extends IntegerGene  implements Gene, java.io.Serializable {
 	/**
 	 * 
 	 */
@@ -13,7 +13,7 @@ public class NoteRangeGene extends IntegerGene  implements Gene, java.io.Seriali
 	Configuration conf;
 	
 	
-	public NoteRangeGene(Configuration aConfiguration, int lowerBound, int upperBound)
+	public PolyphonyGene(Configuration aConfiguration, int lowerBound, int upperBound)
 			throws InvalidConfigurationException {
 		super(aConfiguration, lowerBound, upperBound);
 		m_lowerBounds = lowerBound;
@@ -24,7 +24,7 @@ public class NoteRangeGene extends IntegerGene  implements Gene, java.io.Seriali
 	public Gene newGene()  {
 		Gene newGene = null;
 		try {
-			newGene = new NoteRangeGene(conf, m_lowerBounds, m_upperBounds);
+			newGene = new PolyphonyGene(conf, m_lowerBounds, m_upperBounds);
 		} catch (InvalidConfigurationException e) { }
 		return newGene;
 	}
@@ -35,7 +35,7 @@ public class NoteRangeGene extends IntegerGene  implements Gene, java.io.Seriali
 	   *
 	   */
 	  public String toString() {
-	    String s = "NoteRangeGene(" + m_lowerBounds + "," + m_upperBounds + ")"
+	    String s = "PolyphonyGene(" + m_lowerBounds + "," + m_upperBounds + ")"
 	        + "=";
 	    if (getInternalValue() == null) {
 	      s += "null";
@@ -45,5 +45,6 @@ public class NoteRangeGene extends IntegerGene  implements Gene, java.io.Seriali
 	    }
 	    return s;
 	  }
+
 
 }

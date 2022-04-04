@@ -1,9 +1,9 @@
-package creativeJazzGA;
+package creativeJazzGA.genes;
 
 import org.jgap.*;
 import org.jgap.impl.*;
 
-public class MaxNumNotesGene extends IntegerGene  implements Gene, java.io.Serializable {
+public class NoteRangeGene extends IntegerGene  implements Gene, java.io.Serializable {
 	/**
 	 * 
 	 */
@@ -13,7 +13,7 @@ public class MaxNumNotesGene extends IntegerGene  implements Gene, java.io.Seria
 	Configuration conf;
 	
 	
-	public MaxNumNotesGene(Configuration aConfiguration, int lowerBound, int upperBound)
+	public NoteRangeGene(Configuration aConfiguration, int lowerBound, int upperBound)
 			throws InvalidConfigurationException {
 		super(aConfiguration, lowerBound, upperBound);
 		m_lowerBounds = lowerBound;
@@ -24,7 +24,7 @@ public class MaxNumNotesGene extends IntegerGene  implements Gene, java.io.Seria
 	public Gene newGene()  {
 		Gene newGene = null;
 		try {
-			newGene = new MaxNumNotesGene(conf, m_lowerBounds, m_upperBounds);
+			newGene = new NoteRangeGene(conf, m_lowerBounds, m_upperBounds);
 		} catch (InvalidConfigurationException e) { }
 		return newGene;
 	}
@@ -35,7 +35,7 @@ public class MaxNumNotesGene extends IntegerGene  implements Gene, java.io.Seria
 	   *
 	   */
 	  public String toString() {
-	    String s = "MaxNumNotesGene(" + m_lowerBounds + "," + m_upperBounds + ")"
+	    String s = "NoteRangeGene(" + m_lowerBounds + "," + m_upperBounds + ")"
 	        + "=";
 	    if (getInternalValue() == null) {
 	      s += "null";
