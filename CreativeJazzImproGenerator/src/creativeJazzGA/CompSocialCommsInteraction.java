@@ -6,6 +6,10 @@
      * @author Anna Jordanous
      * Try manhattan distance of Ichromosomes in the Wundt curve
      * normalise each part of the chromosome by FINAL constants 
+     * 
+     * manhattan Dm(x,y)=∑i=1D|xi−yi|
+     * 
+     * Wundt curve
      */
 
     

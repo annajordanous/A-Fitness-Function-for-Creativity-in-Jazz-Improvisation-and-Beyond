@@ -98,6 +98,7 @@ public class ImproviserCreativityFitnessFunction extends FitnessFunction {
 		
 		// Score score = RandomSounds.generate(polyphony, maxNotesToGenerate, key, noteRange, lowestNote);
 		Integer noOfImprovisations   = EvolveImprovisers.getNumImprovisationsOf(chromosome);
+		// TODO this is where the improviser output is generated and put into a new Improvisations object
 		Improvisations improviserOutput = new Improvisations(noOfImprovisations, improParameters, true);
 		String filename = EvolveImprovisers.toString(chromosome);
 
