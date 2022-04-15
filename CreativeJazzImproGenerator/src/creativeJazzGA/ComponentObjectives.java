@@ -44,9 +44,42 @@ public class ComponentObjectives   {
 
 
 
-    public static double ratePopulationMemberForSCI(Score popMember) {
-        return Math.random();
+    public static double ratePopulationMemberForSCI(int[] improParameters) {
+		double noveltyVal  = EvolveImprovisers.compareMemberToAverage(improParameters[0], "POLYPHONY");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[1], "NUM_NOTES");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[2], "KEY");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[3], "NOTE_RANGE");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[4], "LOWEST_NOTE");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[5], "RHYTHM_MULT");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[6], "NOTE_RATIO");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[7], "MEDIAN_TEMPO");
+		noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[8], "TEMPO_VAR");
+		noveltyVal = noveltyVal / 9.0;  // normalise over 9 parameters
+		return (wundtCurveFunction(noveltyVal));
     }
+
+	private static double wundtCurveFunction(double noveltyVal)   {
+		return rewardFunction(noveltyVal) + punishmentFunction(noveltyVal);
+	}
+
+	private static double rewardFunction(double noveltyVal)  {
+			
+		return logisticSigmoid(noveltyVal, 1.0, 1.0, 0.5);
+	}
+
+	private static double punishmentFunction(double noveltyVal)  {
+
+		return (-1 * logisticSigmoid(noveltyVal, 1.0, 1.0, 0.75));  // TODO this is  wrong
+	}
+
+	private static double logisticSigmoid(double noveltyVal, double L, double k, double x0)  {
+		// e exponent = -k ( x - x0)
+		double e_exponent = -1.0 * k * (noveltyVal - x0);
+		// L = max value
+		return (L / (L + Math.exp(e_exponent))) ; 
+	}
+
+
 
 	public static double ratePopulationMemberForDC(Score popMember) {
         return Math.random();

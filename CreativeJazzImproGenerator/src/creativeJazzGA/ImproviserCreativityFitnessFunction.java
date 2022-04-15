@@ -106,12 +106,12 @@ public class ImproviserCreativityFitnessFunction extends FitnessFunction {
 		// old from 2010 code
 		// double fitness = evaluateWithRitchieCriteria(improviserOutput);
 		// new fitness function
-		double fitness = evaluateWithMultiObjectives(improviserOutput);
+		double fitness = evaluateWithMultiObjectives(improviserOutput,improParameters);
 		return fitness;
 	}
 
-	private double evaluateWithMultiObjectives(Improvisations improviserOutput)  {
-		improviserOutput.ratePopulationSocialCommunicationAndInteraction();
+	private double evaluateWithMultiObjectives(Improvisations improviserOutput, int[] improParameters)  {
+		improviserOutput.ratePopulationSocialCommunicationAndInteraction(improParameters);
 		improviserOutput.ratePopulationDomainCompetence();
 		improviserOutput.ratePopulationIntentionAndEmotionalInvolvement();
 		double fitness = ComponentObjectives.calculateWeightedSum(improviserOutput);

@@ -57,6 +57,9 @@ public class EvolveImprovisers extends Thread {
 														// be as unrestrictive
 														// as poss
 
+	private static double popMeanPolyphony, popMeanNumNotes, popMeanKey, popMeanNoteRange, popMeanLowestNote, popMeanRhythmMult, popMeanNoteRatio, popMeanMedianTempo, popMeanTempoVar;
+	
+
 	private static BufferedReader in = new BufferedReader(
 			new InputStreamReader(System.in));
 
@@ -95,14 +98,7 @@ public class EvolveImprovisers extends Thread {
 		sampleGenes[7] = new NumImprovisationsGene(conf, 1, MAX_NUM_IMPROS);
 		sampleGenes[8] = new medianTempoGene(conf, 1, MAX_MEDIAN_TEMPO);
 		sampleGenes[9] = new tempoVarianceGene(conf, 0, MAX_TEMPO_VAR);
-		IChromosome sampleChromosome = new Chromosome(conf, sampleGenes); // not
-																			// sure
-																			// why
-																			// its
-																			// IChromosome
-																			// rather
-																			// than
-																			// Chromosome
+		IChromosome sampleChromosome = new Chromosome(conf, sampleGenes); 
 		conf.setSampleChromosome(sampleChromosome);
 		return conf;
 	}
@@ -114,6 +110,7 @@ public class EvolveImprovisers extends Thread {
 		boolean keepEvolving;
 		// Evolve a new generation of the population
 		population.evolve();
+		recordMeanGenesForPopulation();
 		
 		// update the log file to mark that the end of a generation has been reached
 		System.err.println("END OF GENERATION");
@@ -129,6 +126,20 @@ public class EvolveImprovisers extends Thread {
 		// check to see if the user wants the evolution process to repeat for another generation
 		keepEvolving = checkAboutEvolvingAgain();
 		return keepEvolving;
+	}
+
+	//TODO DO THIS quick hack, need to actually write method, probably as part of initialising population
+	private static void recordMeanGenesForPopulation() { 
+		popMeanPolyphony =  MAX_POLYPHONY/2/0;
+		popMeanNumNotes = MAX_NUM_NOTES/2.0;
+		popMeanKey = MAX_KEY/2.0;
+		popMeanNoteRange =  MAX_NOTE_RANGE/2.0;
+		popMeanLowestNote = MAX_LOWEST_NOTE/2.0;
+		popMeanRhythmMult = MAX_RHYTHM_MULT/2.0;
+		popMeanNoteRatio = MAX_NOTE_RATIO/2.0;
+		popMeanMedianTempo = MAX_MEDIAN_TEMPO/2.0;
+		popMeanTempoVar = MAX_TEMPO_VAR/2.0;
+
 	}
 
 	/**
@@ -424,6 +435,59 @@ public class EvolveImprovisers extends Thread {
 		return MAX_TEMPO_VAR;
 	}
 
+
+	private static double meanPopulationAverage(String geneLabel)  throws Exception{
+			switch(geneLabel) {
+				case "POLYPHONY" : return popMeanPolyphony;
+				case "NUM_NOTES" : return popMeanNumNotes;
+				case "KEY" : return popMeanKey;
+				case "NOTE_RANGE" : return popMeanNoteRange;
+				case"LOWEST_NOTE": return popMeanLowestNote;
+				case "RHYTHM_MULT": return popMeanRhythmMult;
+				case "NOTE_RATIO": return popMeanNoteRatio;
+				case "MEDIAN_TEMPO": return popMeanMedianTempo;
+				case "TEMPO_VAR": return popMeanTempoVar;
+				}
+			// if none of these cases, we have an error - probably need to deal with this better in code with Exceptions
+			throw new Exception("issue in meanPopulation");
+		}
+
+	private static int maxPopulation(String geneLabel)  throws Exception{
+		switch(geneLabel) {
+			case "POLYPHONY" : return MAX_POLYPHONY;
+			case "NUM_NOTES" : return MAX_NUM_NOTES;
+			case "KEY" : return MAX_KEY;
+			case "NOTE_RANGE" : return MAX_NOTE_RANGE;
+			case"LOWEST_NOTE": return MAX_LOWEST_NOTE;
+			case "RHYTHM_MULT": return MAX_RHYTHM_MULT;
+			case "NOTE_RATIO": return MAX_NOTE_RATIO;
+			case "MEDIAN_TEMPO": return MAX_MEDIAN_TEMPO;
+			case "TEMPO_VAR": return MAX_TEMPO_VAR;
+			}
+		// if none of these cases, we have an error - probably need to deal with this better in code with Exceptions
+		throw new Exception("issue in maxPopulation");
+	}
+/** 
+	/EvolveImprovisers.compareMemberToAverage(improParameters[0], "POLYPHONY");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[1], "NUM_NOTES");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[2], "KEY");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[3], "NOTE_RANGE");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[4], "LOWEST_NOTE");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[5], "RHYTHM_MULT");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[6], "NOTE_RATIO");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[7], "MEDIAN_TEMPO");
+	noveltyVal += EvolveImprovisers.compareMemberToAverage(improParameters[8], "TEMPO_VAR");
+	*/
+	public static double compareMemberToAverage(int i, String geneLabel) {
+		double returnValue = 1.0;
+		try {
+			returnValue = (i- meanPopulationAverage(geneLabel))/maxPopulation(geneLabel);
+		} catch(Exception e)  {	System.err.println(" geneLabel problem causing "+e.getMessage());  }
+		return returnValue;
+
+	}
+
+
 	/**
 	 * Starts off the Evolving of Improvisors and initialises parameters during
 	 * the program
@@ -465,4 +529,6 @@ public class EvolveImprovisers extends Thread {
 		// Restore standard error display settings
 		System.setErr(originalStandardError);
 	}
+
+
 }

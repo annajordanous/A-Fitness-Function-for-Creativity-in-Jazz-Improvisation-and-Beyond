@@ -15,7 +15,8 @@ public class Improvisations extends Thread implements JMC {
 
 	private Score[] population, inspiringSet;
 	private double[] ratings, value, typicality; // for Ritchie Criteria
-	private double socialComm, domComp, intentEmo = 0.0;
+	private double socialCommInt;  // ratings per Improvisor
+	private double[] domComp, intentEmo; // ratings per improvisation
 	private int populationCapacity, currentPopulationSize, inspiringSetCapacity;
 	
 	private int polyphony, maxNotes, key, noteRange, lowestNote, rhythm, restRatio, medianTempo, tempoVariance;
@@ -37,6 +38,10 @@ public class Improvisations extends Thread implements JMC {
 		ratings    	   = new double[populationCapacity]; 
 		value 		   = new double[populationCapacity];
 		typicality     = new double[populationCapacity];
+
+		socialCommInt = 0.0;
+		domComp 	  = new double[populationCapacity];
+		intentEmo 	  = new double[populationCapacity];
 		
 		polyphony     = improParameters[0];
 		maxNotes      = improParameters[1];
@@ -51,8 +56,8 @@ public class Improvisations extends Thread implements JMC {
 		if (initialisePopulation) {
 			initialisePopulation();
 		}
-		inspiringSet = population;
-		inspiringSetCapacity = populationCapacity;
+		inspiringSet = population; // for Ritchie's criteria
+		inspiringSetCapacity = populationCapacity;  // for Ritchies Criteria
 		
 	}
 	
@@ -933,39 +938,43 @@ System.out.println("EndTime of music after adding part  = "+population[index].ge
 		return null;
 	}
     public double getSocialCommunicationAndInteractionRating() {
-        return socialComm;
+        return socialCommInt;
     }
     public double getDomainCompetenceRating() {
-        return domComp;
+		double meanDC = 0.0;
+		for (double dc : domComp)  {
+			meanDC += dc;
+		}
+        return (meanDC/domComp.length);
     }
     public double getIntentionAndEmotionalInvolvementRating() {
-        return intentEmo;
-    }
-    public void ratePopulationSocialCommunicationAndInteraction() {
-		// calculate rating of all population members and average over all population
-		double ratingSCI = 0.0;
-		for (Score popMember : population) {
-			ratingSCI += ComponentObjectives.ratePopulationMemberForSCI(popMember);
+		double meanIE = 0.0;
+		for (double ie : intentEmo)  {
+			meanIE += ie;
 		}
-		socialComm = ratingSCI / getCurrentPopulationSize();
+        return (meanIE/intentEmo.length);
+    }
+    public void ratePopulationSocialCommunicationAndInteraction(int[] improParameters) {
+		// calculate rating of the Improvisor relative to the rest of the population
+			socialCommInt = ComponentObjectives.ratePopulationMemberForSCI(improParameters);
     }
 
     public void ratePopulationDomainCompetence() {
 		// calculate rating of all population members and average over all population
-		double ratingDC = 0.0;
-		for (Score popMember : population) {
-			ratingDC +=  ComponentObjectives.ratePopulationMemberForDC(popMember);
+		double[] ratingDC = new double[population.length];
+		for (int i = 0; i < population.length; i++)  {
+			ratingDC[i] =  ComponentObjectives.ratePopulationMemberForDC(population[i]);
 		}
-		domComp = ratingDC / getCurrentPopulationSize();
+		domComp = ratingDC;
     }
     
 	public void ratePopulationIntentionAndEmotionalInvolvement() {
 		// calculate rating of all population members and average over all population
-		double ratingIEI = 0.0;
-		for (Score popMember : population) {
-			ratingIEI +=  ComponentObjectives.ratePopulationMemberForIEI(popMember);
+		double[] ratingIEI = new double[population.length];
+		for (int i = 0; i < population.length; i++)  {
+			ratingIEI[i] =  ComponentObjectives.ratePopulationMemberForIEI(population[i]);
 		}
-		intentEmo = ratingIEI / getCurrentPopulationSize();
+		intentEmo = ratingIEI;
     }
 	
 	
