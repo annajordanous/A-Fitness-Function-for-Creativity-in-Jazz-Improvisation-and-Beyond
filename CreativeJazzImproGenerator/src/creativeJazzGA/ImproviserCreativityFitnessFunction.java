@@ -111,7 +111,7 @@ public class ImproviserCreativityFitnessFunction extends FitnessFunction {
 	}
 
 	private double evaluateWithMultiObjectives(Improvisations improviserOutput, int[] improParameters)  {
-		improviserOutput.ratePopulationSocialCommunicationAndInteraction(improParameters);
+		improviserOutput.ratePopulationSocialCommunicationAndInteraction();
 		improviserOutput.ratePopulationDomainCompetence();
 		improviserOutput.ratePopulationIntentionAndEmotionalInvolvement();
 		double fitness = ComponentObjectives.calculateWeightedSum(improviserOutput);

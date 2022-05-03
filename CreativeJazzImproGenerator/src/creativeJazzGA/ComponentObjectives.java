@@ -58,15 +58,58 @@ public class ComponentObjectives   {
 		return (wundtCurveFunction(noveltyVal));
     }
 
+	/** Comments from Max
+	 * 
+	 * "About the Wundt Curve, I haven’t seen a specific definition by anyone, even Rob’s papers keep it somewhat vague. But the approach is simple, you are adding two logistic functions, reward and punish, to get the hedonic function.
+	 * 	 Sigmoid (quick): https://www.desmos.com/calculator/az3jdvngwo
+	 *   CDF (very slow): https://www.desmos.com/calculator/s8nxtwgqbo
+	 *  
+	 * I’ve added some variables because the default sigmoid function didn’t really work for my application. 
+	 * Basically, n1 and n2 are thresholds for functions r and p. Should both be > 5 if x > 0 and of course n1 < n2. 
+	 * S is a scaling variable I added, maybe not necessary but makes the function easier to use. (Also see 4.4: https://cs.gmu.edu/~jgero/publications/2001/01SaundersGeroAISB.pdf)
+	 * 
+	 * I think the original curve by Berlyne is kind of hard to model, it is just a weird shape. I think you would need to use multiple functions with specific limits, but the functions above should do the trick."
+	 * 
+	 * 
+	 * 
+	 * 
+	 * AND 
+	 * 
+	 * 
+	 *  see 4.4: https://cs.gmu.edu/~jgero/publications/2001/01SaundersGeroAISB.pdf)
+	 * "The most important feature of the hedonic function used in this research that it shares in common with the Wundt curve is that 
+	 * it is the sum of two non-linear functions. In our model the hedonic function is calculated as the sum of two sigmoidal functions 
+	 * whereas the Wundt curve is calculated as the sum of cumulative-Gaussian functions. In either case the functions are summed to 
+	 * produce an inverted ‘U’ shaped curve, as sketched in Figure 6.
+	 * 
+	 *  The sigmoidal function labelled ‘Reward’ represents the intrinsic reward given to the agent for finding an arousal-inducing stimulus over a fairly low threshold, n1. 
+	 * The second function is a punishment for finding an arousal- inducing stimulus over a higher threshold, n2.
+	 * 
+	 * The agents use the above hedonic function to calculate the level of interest that they have in a particular artwork 
+	 * based upon the novelty detected by the self-organising map. 
+	 * Figure 6 illustrates the use of the hedonic curve with an example novelty value Nx that is used to calculate its corresponding hedonic value Hx. 
+	 * The preferred degree of novelty for an agent is determined by the posi- tion of the peak on the hedonic curve along the novelty axis. 
+	 * By altering the thresholds for the reward and punishment sigmoid curves this peak can be positioned anywhere along the novelty axis."
+	 * 
+	 */
+
+
+
 	private static double wundtCurveFunction(double noveltyVal)   {
 		return rewardFunction(noveltyVal) + punishmentFunction(noveltyVal);
 	}
 
+	/** Simple sigmoidal (from Max) 
+	 * r\left(x\right)=				1\cdot\ \left(\frac{1}{1+e^{-Sx+n_{1}}}\right)
+	*/
 	private static double rewardFunction(double noveltyVal)  {
 			
 		return logisticSigmoid(noveltyVal, 1.0, 1.0, 0.5);
 	}
 
+	/** Simple sigmoidal (from Max) 
+	 * p\left(x\right)=				-1.1\cdot\left(\frac{1}{1+e^{-Sx+n_{2}}}\right)  )
+	*/
 	private static double punishmentFunction(double noveltyVal)  {
 
 		return (-1 * logisticSigmoid(noveltyVal, 1.0, 1.0, 0.75));  // TODO this is  wrong

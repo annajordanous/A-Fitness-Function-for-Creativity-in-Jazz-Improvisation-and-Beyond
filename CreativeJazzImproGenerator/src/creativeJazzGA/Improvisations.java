@@ -18,6 +18,7 @@ public class Improvisations extends Thread implements JMC {
 	private double socialCommInt;  // ratings per Improvisor
 	private double[] domComp, intentEmo; // ratings per improvisation
 	private int populationCapacity, currentPopulationSize, inspiringSetCapacity;
+	private int[] improvisorParameters;  // the impro parameters of the Improvisor that generated these improvisations
 	
 	private int polyphony, maxNotes, key, noteRange, lowestNote, rhythm, restRatio, medianTempo, tempoVariance;
 
@@ -34,6 +35,9 @@ public class Improvisations extends Thread implements JMC {
 	public Improvisations(int numMembers, int[] improParameters, boolean initialisePopulation)  {
 		populationCapacity = numMembers;
 		currentPopulationSize = 0;
+		
+		improvisorParameters = improParameters;
+
 		population 	   = new Score[populationCapacity];
 		ratings    	   = new double[populationCapacity]; 
 		value 		   = new double[populationCapacity];
@@ -954,9 +958,9 @@ System.out.println("EndTime of music after adding part  = "+population[index].ge
 		}
         return (meanIE/intentEmo.length);
     }
-    public void ratePopulationSocialCommunicationAndInteraction(int[] improParameters) {
+    public void ratePopulationSocialCommunicationAndInteraction() {
 		// calculate rating of the Improvisor relative to the rest of the population
-			socialCommInt = ComponentObjectives.ratePopulationMemberForSCI(improParameters);
+			socialCommInt = ComponentObjectives.ratePopulationMemberForSCI(improvisorParameters);
     }
 
     public void ratePopulationDomainCompetence() {
